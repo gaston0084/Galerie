@@ -16,6 +16,7 @@
     h1 {
         text-align: center;
         margin-bottom: 30px;
+        font-size: 3rem;
     }
 
     .gallery {
@@ -41,19 +42,23 @@
         display: block;
     }
 
+    .bildbox p {
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
     .bildbox a {
         text-decoration: none;
         color: inherit;
     }
 
-    /* Tablet */
     @media (max-width: 1000px) {
         .gallery {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    /* Handy */
     @media (max-width: 600px) {
         .gallery {
             grid-template-columns: 1fr;
@@ -68,20 +73,26 @@
 
 <div class="gallery">
 
-    <!-- Markt -->
     <div class="bildbox">
         <a href="02Markt.png">
-            <img src="02Markt.png" alt="Historische Marktszene">
+            <img src="02Markt.png" alt="02Markt">
         </a>
         <p>02Markt</p>
     </div>
 
-    <!-- Karte -->
     <div class="bildbox">
         <a href="Karte.png">
-            <img src="Karte.png" alt="Karte von Syldniavien">
+            <img src="Karte.png" alt="Karte">
         </a>
         <p>Karte</p>
+    </div>
+
+    <div class="bildbox">
+        <p>Noch frei</p>
+    </div>
+
+    <div class="bildbox">
+        <p>Noch frei</p>
     </div>
 
 </div>

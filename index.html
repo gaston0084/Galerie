@@ -1,131 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>02Markt</title>
-
-
+<title>Meine Galerie</title>
 
 <style>
-
     body {
-
         margin: 0;
-
-        min-height: 100vh;
-
-        background: #f5f1e8;
-
-        font-family: Arial, sans-serif;
-
-        display: flex;
-
-        justify-content: center;
-
-        align-items: center;
-
-    }
-
-
-
-    .bildbox {
-
-        max-width: 900px;
-
         padding: 20px;
-
-        background: rgb(223, 218, 196);
-
-        border-radius: 12px;
-
-        box-shadow: 0 4px 12px rgba(45, 92, 101, 0.2);
-
-        text-align: center;
-
+        background: #f5f1e8;
+        font-family: Arial, sans-serif;
     }
-
-
 
     h1 {
-
-        margin-top: 0;
-
-        margin-bottom: 20px;
-
+        text-align: center;
+        margin-bottom: 30px;
     }
 
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1600px;
+        margin: auto;
+    }
 
+    .bildbox {
+        background: rgb(223, 218, 196);
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(45, 92, 101, 0.2);
+        text-align: center;
+    }
 
-    img {
-
+    .bildbox img {
         width: 100%;
-
         height: auto;
-
         border-radius: 8px;
-
         display: block;
-
     }
 
-
-
-    a {
-
-        display: inline-block;
-
-        margin-top: 15px;
-
-        color: #286d90;
-
+    .bildbox a {
         text-decoration: none;
-
+        color: inherit;
     }
 
-
-
-    a:hover {
-
-        text-decoration: underline;
-
+    /* Tablet */
+    @media (max-width: 1000px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
+    /* Handy */
+    @media (max-width: 600px) {
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
-
 </head>
-
-
 
 <body>
 
+<h1>Meine Galerie</h1>
 
+<div class="gallery">
 
-<div class="bildbox">
+    <!-- Markt -->
+    <div class="bildbox">
+        <a href="02Markt.png">
+            <img src="02Markt.png" alt="Historische Marktszene">
+        </a>
+        <p>02Markt</p>
+    </div>
 
-    <h1>02Markt</h1>
-
-
-
-    <a href="02Markt.png">
-
-        <img src="02Markt.png" alt="Historische Marktszene">
-
-    </a>
-
-
-
-    <a href="02Markt.png">Bild direkt öffnen</a>
+    <!-- Karte -->
+    <div class="bildbox">
+        <a href="Karte.png">
+            <img src="Karte.png" alt="Karte von Syldniavien">
+        </a>
+        <p>Karte</p>
+    </div>
 
 </div>
 
-
-
 </body>
-
 </html>
